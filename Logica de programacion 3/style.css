@@ -1,0 +1,210 @@
+:root {
+    --primary-dark: #2c3e50;
+    --primary: #3498db;
+    --primary-light: #2980b9;
+    --secondary: #34495e;
+    --accent: #1abc9c;
+    --text-light: #ffffff;
+    --text-dark: #2c3e50;
+    --error: #e74c3c;
+}
+
+/* Estructura principal */
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    padding: 20px;
+}
+
+.calculator-card {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.calculator-header {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 25px;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+}
+
+.calculator-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.calculator-subtitle {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.calculator-body {
+    padding: 30px;
+}
+
+/* Formulario y botones */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.calculator-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.calculator-input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.calculator-button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calculator-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.calculator-button.small {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.calculator-button.small:hover {
+    background-color: #e0e0e0;
+}
+
+/* Mensajes y resultados */
+.error-message {
+    color: var(--error);
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #ffeeee;
+    border-radius: 5px;
+    display: none;
+    border-left: 4px solid var(--error);
+}
+
+.result-container {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.result-placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.factorial-result {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: 10px;
+}
+
+/* Historial de cálculos */
+.history-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.history-section h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.history-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.history-item:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.history-operation {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.history-result {
+    font-weight: bold;
+}
+
+.history-time {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.empty-history {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 10px;
+}
+
+/* Pie de página */
+.calculator-footer {
+    padding: 15px;
+    text-align: center;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    font-size: 0.8rem;
+}

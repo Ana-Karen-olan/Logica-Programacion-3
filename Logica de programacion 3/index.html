@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Factorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-card">
+            <div class="calculator-header">
+                <h1>Calculadora Factorial</h1>
+                <p class="calculator-subtitle">Ingresa un número para calcular su factorial</p>
+            </div>
+            
+            <div class="calculator-body">
+                <div class="form-group">
+                    <label for="numberInput">Número entero:</label>
+                    <input type="text" id="numberInput" class="calculator-input" placeholder="Ejemplo: 5">
+                </div>
+                
+                <button id="calculateBtn" class="calculator-button">Calcular</button>
+                
+                <div id="errorMessage" class="error-message"></div>
+                
+                <div id="resultContainer" class="result-container">
+                    <div class="result-placeholder">Resultado aparecerá aquí</div>
+                </div>
+
+                <!-- Sección de Historial -->
+                <div class="history-section">
+                    <h3>Historial de Cálculos</h3>
+                    <div id="historyList" class="history-list">
+                        <!-- Los resultados aparecerán aquí dinámicamente -->
+                    </div>
+                    <button id="clearHistory" class="calculator-button small">Limpiar Historial</button>
+                </div>
+            </div>
+            
+            <div class="calculator-footer">
+                <p>Ana Karen Olán Romero &copy; 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
